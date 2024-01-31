@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Services from '../Services/service';
+import BusinessDetails from '../BussnesData/BusinessDetails';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,10 +55,10 @@ export default function BasicTabs() {
           <Tab label="שרותים" {...a11yProps(1)} sx={{width: '50%'}}/>
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        Item One
+      <CustomTabPanel value={value} index={0}  >
+        <BusinessDetails/>
       </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
+      <CustomTabPanel value={value} index={1} >
         <Services/>
       </CustomTabPanel>
 
